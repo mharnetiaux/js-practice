@@ -1,4 +1,6 @@
 let a = "hey there";
 
-let b = a.split('');
 
+let c = a.replace(/ /g,'');
+
+console.log(c);
