@@ -1,19 +1,21 @@
+function bubbleSortWhile(a) {
+     let swapped;
+     do {
+         swapped = false;
+         for (let i=0; i < a.length; i++) {
+             if (a[i] > a[i+1]) {
+                 let temp = a[i];
+                 a[i] = a[i+1];
+                 a[i+1] = temp;
+                 swapped = true;
+             }
+         }
+     }
+     while (swapped){
+        return a;
+     }
+ }
+let a = [2,1];
 
-
-function bubbleSort(arr){
-    for(let i = 0; i < arr.length; i++){
-        for(let i = 0; i < arr.length; i++){
-            if(arr[i] > arr[i + 1]){
-                let tmp = arr[i];
-                arr[i] = arr[i + 1];
-                arr[i + 1] = tmp;
-            }
-        }
-    }
-    return arr;
-}
-
-let arr = [10,9];
-console.log(bubbleSort(arr));
-
+console.log(bubbleSortWhile(a));
 
