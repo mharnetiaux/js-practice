@@ -19,11 +19,11 @@
     z-index: 3;
 }
 
-#click_icon.open_click{
+#click_icon.close_nav_img{
     background-color: red;
 }
 
-#nav_header .open {
+#nav_header .nav_open {
     width: 100%;
 }
 
