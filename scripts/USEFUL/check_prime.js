@@ -1,6 +1,4 @@
-/**
- * Created by mattdharnetiaux on 3/29/17.
- */
+
 function isPrime(n){
     let divisor = 2;
 

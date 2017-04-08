@@ -1,0 +1,45 @@
+#nav_header ul {
+    background-color: yellow;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top:0;
+    transition: width .5s ease-out;
+    text-align: center;
+    width: 0;
+}
+
+#click_icon{
+    background-color: green;
+    height:3rem;
+    position: absolute;
+    right:0;
+    top:0;
+    width: 3rem;
+    z-index: 3;
+}
+
+#click_icon.open_click{
+    background-color: red;
+}
+
+#nav_header .open {
+    width: 100%;
+}
+
+@media screen and (min-width: 37em) {
+
+    #nav_header ul {
+        width: inherit;
+        right:0;
+    }
+
+    #nav_header li {
+        margin-left: 2rem;
+        display: inline-block;
+    }
+
+    #click_icon {
+        display: none;
+    }
+}
