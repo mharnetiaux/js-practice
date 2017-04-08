@@ -1,19 +1,19 @@
 const click_icon = document.querySelector("#click_icon"),
     nav_element = document.querySelector('#nav_header'),
     ul_element = document.querySelector("#menu"),
-    open = "nav_open",
+    open_nav_img = "open_nav_img",
     closed = "",
     close_nav_img = "close_nav_img";
 
 click_icon.addEventListener("click", function(event) {
     switch(ul_element.className){
-        case open:
+        case open_nav_img:
             click_icon.className = closed;
             ul_element.className = closed;
             break;
         case "":
             click_icon.className = close_nav_img;
-            ul_element.className = open;
+            ul_element.className = open_nav_img;
             break;
         default:
             click_icon.className = closed;
@@ -24,7 +24,7 @@ click_icon.addEventListener("click", function(event) {
 
 document.addEventListener('click', (event) => {
     let isClickInside = nav_element.contains(event.target);
-    if (!isClickInside && ul_element.className === open) {
+    if (!isClickInside && ul_element.className === open_nav_img) {
         ul_element.className = "";
         click_icon.className = "";
     }
