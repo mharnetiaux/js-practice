@@ -1,8 +1,11 @@
 
 function flatten(arr) {
     let array = [];
+
     while(arr.length) {
+
         let value = arr.shift();
+
         if(Array.isArray(value)) {
             // this line preserve the order
             arr = value.concat(arr);

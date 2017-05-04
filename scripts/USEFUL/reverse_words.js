@@ -1,8 +1,8 @@
 function reverse(s) {
-    let o = '';
+    let newString = '';
     for (let i = s.length - 1; i >= 0; i--)
-        o += s[i];
-    return o;
+        newString += s[i];
+    return newString;
 }
 
 console.log(reverse("hey there"));

@@ -1,18 +1,15 @@
 function greatestCommonDivisor(a, b){
-    let divisor = 2,
-        greatestDivisor = 1;
-
-    //if u pass a -ve number this will not work. fix it dude!!
-    if (a < 2 || b < 2)
-        return 1;
-
-    while(a >= divisor && b >= divisor){
-        if(a %divisor == 0 && b% divisor ==0){
-            greatestDivisor = divisor;
-        }
-        divisor++;
+    a = Math.abs(a);
+    b = Math.abs(b);
+    if (b > a) {
+        let temp = a; a = b; b = temp;
     }
-    return greatestDivisor;
+    while (true) {
+        if (b === 0) return a;
+        a %= b;
+        if (a === 0) return b;
+        b %= a;
+    }
 }
 
 console.log(greatestCommonDivisor(14,21));

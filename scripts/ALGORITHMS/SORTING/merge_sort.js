@@ -13,8 +13,6 @@
  This will be the sorted list.
  */
 
-
-
 let a = [1,2,4,6,5,2];
 
 function mergeSort(arr) {

@@ -7,7 +7,7 @@
 
 let a = [2,1,3,6,5];
 function quicksort(arr){
-    if (arr.length == 0)
+    if (arr.length === 0)
     return [];
 
     let left = [],
@@ -21,7 +21,6 @@ function quicksort(arr){
             right.push(arr[i]);
         }
     }
-
     return quicksort(left).concat(pivot, quicksort(right));
 }
 
