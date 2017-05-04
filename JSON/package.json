@@ -1,0 +1,23 @@
+{
+  "name": "json",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "json": "npm run json1 & npm run json2",
+    "json1": "json-server --watch data/db.json --port 3000",
+    "json2": "json-server --watch data/db2.json --port 3001",
+    "start": "",
+    "test": ""
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "json-server": "^0.10.0"
+  },
+  "dependencies": {
+    "mocha": "^3.3.0",
+    "requirejs": "^2.3.3",
+    "supertest": "^3.0.0"
+  }
+}

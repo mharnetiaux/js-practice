@@ -9,13 +9,12 @@ function fib(n){
 
     return fibo[n];
 }
-
 console.log(fib(12));
+
 
 function fib2(n){
     if(n <= 2) return 1;
     else
         return fib2(n-1) + fib2(n-2);
 }
-
 console.log(fib2(12));

@@ -1,7 +1,7 @@
 ////BINARY SEARCH
 function binary(n){
-    let sum = 0,
-        max = 0;
+     let sum = 0,
+     max = 0;
 
     while(n > 0){
 
@@ -13,9 +13,9 @@ function binary(n){
         }else{
             sum = 0;
         }
-        n = Math.floor(n/2)
+        --n;
     }
-    console.log(max);
+     console.log(max);
 }
 
 binary(6);
