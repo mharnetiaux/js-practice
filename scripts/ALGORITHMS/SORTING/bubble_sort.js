@@ -7,9 +7,7 @@
  compares each pair of adjacent items and swaps them if they are in the wrong order
 */
 
-
-
-let a = [12,3,2,10,1,5,4];
+let arr = [12,3,2,10,1,5,4];
 ////FIRST INDEX
 /*function bubbleSort(arr){
     let tmp,
@@ -49,7 +47,6 @@ console.log(bubbleSort(array));*/
     return arr;
 }console.log(bubbleSortLastIndex(a));*/
 
-
 ////DO WHILE LOOP
 /*function bubbleSortWhile(a)
 {
@@ -72,3 +69,69 @@ console.log(bubbleSort(array));*/
 
 console.log(bubbleSortWhile(a));*/
 
+///WITH TWO FOR LOOPS
+function bubble_sort(arr){
+    let i,
+        j;
+    for(i = 0; i < arr.length-1; i++){
+        console.log("Iteration " + (i+1));
+        for(j = 0; j < arr.length-1; j++){
+            console.log("Items compared: " + "[" + arr[j] + "," + arr[j+1] + "]");
+            if(arr[j] > arr[j + 1]){
+                let tmp;
+                tmp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = tmp;
+                console.log("Swapped: " + "[" + arr[j] + "," + arr[j+1] + "]");
+            }else{
+                console.log("Not swapped");
+            }
+        }
+    }
+    console.log(arr);
+}
+
+bubble_sort(arr);
+
+///OlD C WAY
+/*function bubble_sort(arr){
+    "use strict";
+    let tmp,
+        i,
+        j,
+        swapped = false,
+        MAX = arr.length;
+
+    ///loop through all numbers
+    for(i = 0; i < MAX-1; i++){
+        swapped = false;
+
+        for(j = 0; j < MAX-1-i; j++){
+            console.log("Iteration " + (i+1));
+
+            console.log("Items compared: " + "[" + arr[j] + "," + arr[j+1] + "]");
+
+            //check if the next number is lesser than the current no.
+            //swap the numbers.
+            //(Bubble up the highest number)
+
+            if(arr[j] > arr[j+1]){
+                tmp = arr[j];
+                arr[j] = arr[j+1];
+                arr[j+1] = tmp;
+
+                swapped = true;
+                console.log("Swapped: " + "[" + arr[j] + "," + arr[j+1] + "]");
+            }else{
+                console.log("Not swapped");
+            }
+        }
+        //if no number was swapped that means
+        //array is sorted now, break the loop.
+        if(!swapped){
+            break;
+        }
+    }
+}*/
+
+ //bubble_sort(arr);

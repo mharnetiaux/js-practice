@@ -1,31 +1,38 @@
-///SELECTION SORT
-////UNSTABLE SORT ALGORITHM:PERFORM SWAPS
-///COMPLEXITY:
-///BEST-CASE RUNNING TIME: O(N^2)
-///AVERAGE-CASE RUNNING TIME: O(N^2)
-///WORST-CASE RUNNING TIME: O(N^2)
+//Step 1 − Set MIN to location 0
+//Step 2 − Search the minimum element in the list
+//Step 3 − Swap with value at location MIN
+//Step 4 − Increment MIN to point to next element
+//Step 5 − Repeat until list is sorted
+let arr = [12,3,2,10,1,5,4];
 
-let a = [3,2,4,1];
+console.log("Input array " + "[" + arr + "]");
 
-function selectSort(arr){
-    let min,
-    tmp,
-    length = arr.length;
+function selection_sort(){
+    "use strict";
+    let index_min,
+        i,
+        j,
+        MAX = arr.length;
 
-    for(let i = 0; i < length; i++){
-        min = i;
+    //loop through all numbers
+    for(i=0; i < MAX;i++){
+        console.log("Iteration: " + (i+1));
 
-        for(let j = i + 1; j < length; j++){
-            if(arr[j] < arr[min]){
-                min = j;
-            }
+        //set current element at minimum
+        index_min = i;
+        console.log("Current minimum " + index_min);
+        
+        //check the element to be minimum
+        for(j = i + 1; j < MAX; j++){
+             if(arr[j] < arr[index_min]){
+                 index_min = j;
+             }
         }
-        tmp = arr[i];
-        arr[i] = arr[min];
-        arr[min] = tmp
+
+        if(index_min !== i){
+            console.log("Items swapped: " + "[" + arr[i] + "," + arr[index_min] + "]");
+        }
     }
-    return arr;
 }
 
-console.log(selectSort(a));
-
+selection_sort(arr);

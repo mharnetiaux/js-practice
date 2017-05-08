@@ -15,6 +15,7 @@
  }
  console.log(max);
  }*/
+
 /*function how_many_bits(n){
  "use strict";
  let r = 0;
@@ -26,6 +27,7 @@
  }
  console.log(r);
  }*/
+
 /*function decimal_to_binary(n){
  "use strict";
  let r = "";
