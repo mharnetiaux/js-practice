@@ -1,4 +1,4 @@
-function binarySearch(items, value){
+/*function binarySearch(items, value){
 
     let startIndex  = 0,
         stopIndex   = items.length - 1,
@@ -24,4 +24,4 @@ function binarySearch(items, value){
 
 let items = [1,2,3,4,5,6,7,8];
 
-console.log(binarySearch(items,5));
+console.log(binarySearch(items,5));*/
