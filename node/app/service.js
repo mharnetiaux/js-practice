@@ -1,7 +1,7 @@
 import {MongoClient, ObjectID} from 'mongodb';
 import assert from 'assert';
 let db = {};
-let connection_string = 'mongodb://mattsky:Mizkei2014!@ds123311.mlab.com:23311/newswatcherdb_harnet';
+let connection_string = 'mongodb://username:password@ds123311.mlab.com:23311/newswatcherdb_harnet';
 
 let insert_document = function(db, callback) {
     db.collection('newswatcher').insertOne( {
