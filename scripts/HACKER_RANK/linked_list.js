@@ -1,8 +1,8 @@
 class Node{
-     constructor(data){
-         this.data = data;
-         this.next = null;
-     }
+    constructor(data){
+        this.data = data;
+        this.next = null;
+    }
 }
 class Singly_Linked_List{
     constructor(length,head){
@@ -13,14 +13,14 @@ class Singly_Linked_List{
     add(data) {
         let node = new Node(data),
             current_node = this.head;
-        
+
         //1st use-case:an empty list
         if (!current_node) {
             this.head = node;
             this.length++;
             return node;
         }
-        
+
         //2nd use-case: a non-empty list
         while(current_node.next){
             current_node = current_node.next;
@@ -54,15 +54,15 @@ class Singly_Linked_List{
     }
 
     remove(position){
-       let current_node = this.head,
-           length = this.length,
-           count = 0,
-           message = {failure:'non-existent node in the list'},
-           before_node_to_delete = null,
-           node_to_delete = null,
-           delete_node = null;
+        let current_node = this.head,
+            length = this.length,
+            count = 0,
+            message = {failure:'non-existent node in the list'},
+            before_node_to_delete = null,
+            node_to_delete = null,
+            delete_node = null;
 
-       //1st case: an invalid position
+        //1st case: an invalid position
         if(position < 0 || position > length){
             console.log(message.failure);
         }
@@ -94,4 +94,7 @@ class Singly_Linked_List{
 }
 
 let list = new Singly_Linked_List();
+list.add(1);
+list.add(2);
+console.log(list);
 

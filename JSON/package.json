@@ -7,17 +7,46 @@
     "json": "npm run json1 & npm run json2",
     "json1": "json-server --watch data/db.json --port 3000",
     "json2": "json-server --watch data/db2.json --port 3001",
-    "start": "",
-    "test": ""
+    "compile": "webpack -p",
+    "silent_test": "mocha --compilers js:babel-register --require babel-polyfill --recursive",
+    "test": "./node_modules/karma/bin/karma start karma.conf.js",
+    "codecov": "cat ./coverage/*/lcov.info | ./node_modules/codecov.io/bin/codecov.io.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "json-server": "^0.10.0"
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "bundle-loader": "^0.5.5",
+    "chai": "^4.0.2",
+    "codecov.io": "^0.1.6",
+    "istanbul": "^0.4.5",
+    "istanbul-instrumenter-loader": "^2.0.0",
+    "json-server": "^0.10.0",
+    "karma": "^1.7.0",
+    "karma-chrome-launcher": "^2.1.1",
+    "karma-coverage": "^1.1.1",
+    "karma-coverage-istanbul-reporter": "^1.3.0",
+    "karma-firefox-launcher": "^1.0.1",
+    "karma-mocha": "^1.3.0",
+    "karma-mocha-reporter": "^2.2.3",
+    "karma-phantomjs-launcher": "^1.0.4",
+    "karma-safari-launcher": "^1.0.0",
+    "karma-sinon-chai": "^1.3.1",
+    "karma-spec-reporter": "0.0.31",
+    "karma-webpack": "^2.0.3",
+    "mocha": "^3.4.2",
+    "phantomjs-polyfill": "0.0.2",
+    "phantomjs-prebuilt": "^2.1.14",
+    "sinon": "^2.3.2",
+    "supertest": "^3.0.0",
+    "webpack": "^2.6.1"
   },
   "dependencies": {
-    "mocha": "^3.3.0",
-    "requirejs": "^2.3.3",
-    "supertest": "^3.0.0"
+    "lodash": "^4.17.4",
+    "requirejs": "^2.3.3"
   }
 }

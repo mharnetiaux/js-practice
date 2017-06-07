@@ -1,4 +1,4 @@
-class Ajax{
+/*class Ajax{
     constructor(){
         if (!this.httpRequest){
             this.httpRequest = window.ActiveX ? new ActiveXObject("Microsoft.XMLHTTP"): new XMLHttpRequest();
@@ -8,7 +8,7 @@ class Ajax{
 
 Ajax.prototype.GET = function(url){
     "use strict";
-    let http = this.httpRequest;
+    const http = this.httpRequest;
 
     function handleReadyState(callback){
         if (http.readyState === 4 && http.status === 200){
@@ -25,13 +25,13 @@ Ajax.prototype.GET = function(url){
 
 Ajax.prototype.POST = function(url,obj){
     "use strict";
-    let http = this.httpRequest;
+    const http = this.httpRequest;
 
     http.open("POST",url,true);
     http.setRequestHeader("Content-type", "application/json");
     http.send(JSON.stringify(obj));
 };
 
-
+export default Ajax; */
 
 

@@ -6,6 +6,7 @@ let arr = [
     [0,0,0,2,0,0],
     [0,0,1,2,4,0],
 ];
+
 let arr2 = [
     [0,6,-7,1,6,3],
     [-8,2,8,3,-2,7],
@@ -14,6 +15,7 @@ let arr2 = [
     [6,2,8,1,3,0],
     [8,5,0,4,-7,4],
 ];
+
 let arr3 = [
     [0,-4,-6,0,-7,-6],
     [-1,-2,-6,-8,-3,-1],
@@ -28,9 +30,8 @@ function hour_glass(arr){
     let count = -64,
         length = arr.length/2;
 
-    for( let i = 0 ; i <= length; i ++) {
-        for( let j = 0; j <= length; j ++)
-        {
+    for(let i = 0; i <= length; i++) {
+        for(let j = 0; j <= length; j++){
             let total = 0,
                 top = arr[i][j] + arr[i][j+1] + arr[i][j+2],
                 middle = arr[i+1][j+1],
